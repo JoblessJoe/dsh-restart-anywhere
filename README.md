@@ -10,8 +10,6 @@
   <a href="LICENSE"><img src="https://img.shields.io/github/license/JoblessJoe/dsh-restart-anywhere?color=34d399" alt="MIT license"></a>
 </p>
 
-> **中文简介** · DeepSeek Harness (dsh) Web 界面插件：侧边栏「设置」上方的一个小小的「重启 dsh」按钮，适用于**你的**部署方式 —— systemd、Docker / Podman、Kubernetes、pm2、supervisord、launchd、终端 / tmux / nohup、Windows。原地重启（进程 PID 不变），无需检测或配置守护进程，重启完成后页面自动刷新。零运行时依赖，无需配置。<br>安装：`npx @deepseek-ai/dsh plugin --profile web add dsh-restart-anywhere`
-
 A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (dsh) web GUI plugin that adds one small **Restart dsh** button above Settings. It is for the moments you need a restart: you installed a plugin, changed a config, or fixed a bug in your own plugin.
 
 **It works with *your* setup.** systemd, Docker, Kubernetes, pm2, a tmux pane, a plain terminal or Windows: click, and dsh is back in a few seconds. The page reloads by itself.
@@ -98,3 +96,5 @@ macOS uses the same `execve` path as Linux, and Windows the same wrapper path as
 ## License
 
 MIT
+
+> **中文简介** · DeepSeek Harness (dsh) Web 界面插件：侧边栏「设置」上方的一个小小的「重启 dsh」按钮，适用于**你的**部署方式 —— systemd、Docker / Podman、Kubernetes、pm2、supervisord、launchd、终端 / tmux / nohup、Windows。原地重启（进程 PID 不变），无需检测或配置守护进程，重启完成后页面自动刷新。零运行时依赖，无需配置。<br>安装：`npx @deepseek-ai/dsh plugin --profile web add dsh-restart-anywhere`
