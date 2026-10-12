@@ -1,0 +1,4 @@
+# dsh-restart-anywhere bundle mount (new plugin -> `insert:`).
+- insert:
+    - id: dsh-restart-anywhere
+      name: 'dsh-restart-anywhere'
