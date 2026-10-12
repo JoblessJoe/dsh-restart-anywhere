@@ -6,6 +6,7 @@
   <a href="https://www.npmjs.com/package/dsh-restart-anywhere"><img src="https://img.shields.io/npm/v/dsh-restart-anywhere?color=34d399&label=npm" alt="npm version"></a>
   <a href="https://www.npmjs.com/package/dsh-restart-anywhere"><img src="https://img.shields.io/npm/dm/dsh-restart-anywhere?color=34d399" alt="npm downloads"></a>
   <img src="https://img.shields.io/badge/dependencies-0-34d399" alt="zero runtime dependencies">
+  <a href="https://joblessjoe.com/dsh-restart-anywhere"><img src="https://img.shields.io/badge/website-joblessjoe.com-34d399" alt="project page on joblessjoe.com"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/JoblessJoe/dsh-restart-anywhere?color=34d399" alt="MIT license"></a>
 </p>
 
