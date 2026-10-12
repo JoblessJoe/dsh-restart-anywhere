@@ -1,6 +1,6 @@
 {
   "name": "dsh-restart-anywhere",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "One small Restart button in the DeepSeek Harness web GUI sidebar that works with your setup: systemd, Docker/Podman/Kubernetes, pm2, supervisord, launchd, terminal/tmux, Windows. Restarts in place (same PID), no supervisor detection or config, reloads the page when dsh is back.",
   "homepage": "https://github.com/JoblessJoe/dsh-restart-anywhere#readme",
   "author": "Johannes Tebbert <info@joblessjoe.com> (https://joblessjoe.com)",
@@ -12,32 +12,73 @@
     "./client": "./lib/client.js",
     "./package.json": "./package.json"
   },
-  "files": ["lib", "cordis.patch.yml"],
+  "files": [
+    "lib",
+    "cordis.patch.yml"
+  ],
   "dsh": {
-    "bundle": { "patch": "./cordis.patch.yml" },
-    "client": { "platform": "web" },
-    "compatibility": { "dsh": ">=0.2.0-rc.2" }
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    },
+    "compatibility": {
+      "dsh": ">=0.2.0-rc.2"
+    }
   },
   "dshhub": {
     "schemaVersion": 1,
     "displayName": "Restart Anywhere",
     "summary": "One restart button that works with your setup: systemd, Docker, Kubernetes, pm2, launchd, terminal, Windows. Restarts in place, page reloads by itself.",
-    "categories": ["System", "Web UI", "Developer Tools"],
-    "surfaces": ["host", "web"],
-    "capabilities": { "provides": [] },
-    "compatibility": { "dsh": ">=0.2.0-rc.2", "node": ">=20" },
+    "categories": [
+      "System",
+      "Web UI",
+      "Developer Tools"
+    ],
+    "surfaces": [
+      "host",
+      "web"
+    ],
+    "capabilities": {
+      "provides": []
+    },
+    "compatibility": {
+      "dsh": ">=0.2.0-rc.2",
+      "node": ">=20"
+    },
     "permissions": {}
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoblessJoe/dsh-restart-anywhere.git"
   },
-  "bugs": { "url": "https://github.com/JoblessJoe/dsh-restart-anywhere/issues" },
+  "bugs": {
+    "url": "https://github.com/JoblessJoe/dsh-restart-anywhere/issues"
+  },
   "keywords": [
-    "deepseek", "deepseek-harness", "dsh", "dsh-plugin", "client-plugin",
-    "restart", "reload", "systemd", "docker", "kubernetes", "pm2", "launchd", "supervisor", "execve",
-    "重启", "dsh插件"
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "client-plugin",
+    "restart",
+    "reload",
+    "systemd",
+    "docker",
+    "kubernetes",
+    "pm2",
+    "launchd",
+    "supervisor",
+    "execve",
+    "重启",
+    "dsh插件"
   ],
-  "engines": { "node": ">=20" },
-  "scripts": { "test": "node test.js", "release": "git pull origin main && npm publish" }
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node test.js",
+    "release": "git pull origin main && npm publish"
+  }
 }
