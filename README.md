@@ -12,6 +12,8 @@
 
 A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (dsh) web GUI plugin that adds one small **Restart dsh** button above Settings. It is for the moments you need a restart: you installed a plugin, changed a config, or fixed a bug in your own plugin.
 
+**Agents can do it too.** A `dsh_restart` tool lets an agent restart dsh after installing or editing a plugin. With a `continue_prompt`, it is woken in the same session once dsh is back and carries on.
+
 **It works with *your* setup.** systemd, Docker, Kubernetes, pm2, a tmux pane, a plain terminal or Windows: click, and dsh is back in a few seconds. The page reloads by itself.
 
 ```bash
@@ -72,6 +74,15 @@ Click **Restart dsh** and confirm. The icon spins while dsh restarts, and the pa
 
 > Running agent sessions are interrupted by a restart, like with any restart. The confirmation dialog says so.
 
+## For agents: the `dsh_restart` tool
+
+Agents get the same restart as a tool, e.g. after installing or editing a plugin they want to test.
+
+- **`dsh_restart({ continue_prompt? })`:** restarts dsh exactly like the button.
+- **`continue_prompt`:** once dsh is back, the agent is woken in the same session with this text as its next instruction. Leave it out and the session just stays stopped.
+- **Root sessions only:** subagents don't get the tool.
+- A wake older than 5 minutes is dropped, so a restart that never happened can't wake a session later.
+
 ## Security
 
 - **Login required:** the restart route is registered through dsh's own `/api` connection layer (`ctx.connection.fetch`). It only answers browsers that are logged in to your dsh, and dsh's Host/Origin fence applies.
@@ -88,13 +99,14 @@ Verified live with dsh 0.2.0 on Linux:
 - **Wrapper path:** Node without `execve`, three restarts in a row, then Ctrl-C.
 - **Supervisor that only restarts on failure:** dsh stays up and the supervisor never notices.
 - **`--port 0`**, and two clicks at once.
+- **`dsh_restart` tool:** an agent calls it with a `continue_prompt`, under systemd and in place via `execve`. Both times it was woken in the same session within seconds and finished the task. The session still reloads cleanly afterwards.
 
 macOS uses the same `execve` path as Linux, and Windows the same wrapper path as old Node. Neither has been run on real hardware yet, so reports are very welcome.
 
-`npm test` runs the setup detection and command-line checks.
+`npm test` runs the setup detection and command-line checks, plus the agent tool and wake-up logic against a fake dsh.
 
 ## License
 
 MIT
 
-> **中文简介** · DeepSeek Harness (dsh) Web 界面插件：侧边栏「设置」上方的一个小小的「重启 dsh」按钮，适用于**你的**部署方式 —— systemd、Docker / Podman、Kubernetes、pm2、supervisord、launchd、终端 / tmux / nohup、Windows。原地重启（进程 PID 不变），无需检测或配置守护进程，重启完成后页面自动刷新。零运行时依赖，无需配置。<br>安装：`npx @deepseek-ai/dsh plugin --profile web add dsh-restart-anywhere`
+> **中文简介** · DeepSeek Harness (dsh) Web 界面插件：侧边栏「设置」上方的一个小小的「重启 dsh」按钮，适用于**你的**部署方式 —— systemd、Docker / Podman、Kubernetes、pm2、supervisord、launchd、终端 / tmux / nohup、Windows。原地重启（进程 PID 不变），无需检测或配置守护进程，重启完成后页面自动刷新。Agent 也能用：`dsh_restart` 工具重启 dsh，并可在 dsh 恢复后用 `continue_prompt` 唤醒同一会话继续工作。零运行时依赖，无需配置。<br>安装：`npx @deepseek-ai/dsh plugin --profile web add dsh-restart-anywhere`
