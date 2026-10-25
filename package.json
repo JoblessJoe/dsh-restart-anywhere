@@ -1,6 +1,6 @@
 {
   "name": "dsh-restart-anywhere",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "One small Restart button in the DeepSeek Harness web GUI sidebar that works with your setup: systemd, Docker/Podman/Kubernetes, pm2, supervisord, launchd, terminal/tmux, Windows. Restarts in place (same PID), no supervisor detection or config, reloads the page when dsh is back. Agents get it too: a dsh_restart tool that wakes them with a continue prompt once dsh is back up.",
   "icon": "./icon.svg",
   "homepage": "https://github.com/JoblessJoe/dsh-restart-anywhere#readme",
