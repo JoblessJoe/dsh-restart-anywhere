@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="https://raw.githubusercontent.com/JoblessJoe/dsh-restart-anywhere/main/icon.svg" alt="dsh-restart-anywhere icon" width="96" height="96">
+</p>
+
+<p align="center">
   <img src="https://raw.githubusercontent.com/JoblessJoe/dsh-restart-anywhere/main/.github/assets/banner.svg" alt="dsh-restart-anywhere: one restart button for the DeepSeek Harness web GUI that works with your setup" width="100%">
 </p>
 
