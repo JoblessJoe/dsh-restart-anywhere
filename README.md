@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/JoblessJoe/dsh-restart-anywhere/main/.github/assets/banner.svg" alt="dsh-restart-anywhere: one restart button for the DeepSeek Harness web GUI that works with your setup" width="100%">
+  <img src="https://raw.githubusercontent.com/JoblessJoe/dsh-restart-anywhere/main/.github/assets/banner.svg?v=2" alt="dsh-restart-anywhere: one restart button for the DeepSeek Harness web GUI that works with your setup" width="100%">
 </p>
 
 <p align="center">

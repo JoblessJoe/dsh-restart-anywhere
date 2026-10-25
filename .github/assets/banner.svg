@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" font-family="ui-sans-serif, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
   <rect width="1200" height="420" rx="20" fill="#0d1117"/>
-  <svg x="60" y="52" width="46" height="46" viewBox="0 0 64 64">
+  <svg x="60" y="98" width="56" height="56" viewBox="0 0 64 64">
   <defs>
     <linearGradient id="ic-bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#5EEAD4"/>
@@ -36,7 +36,7 @@
   </g>
   <rect x=".5" y=".5" width="63" height="63" rx="14.5" fill="none" stroke="#fff" stroke-opacity=".18"/>
 </svg>
-  <text x="60" y="140" fill="#e6edf3" font-size="42" font-weight="700" letter-spacing="-1">dsh-restart-anywhere</text>
+  <text x="128" y="140" fill="#e6edf3" font-size="36" font-weight="700" letter-spacing="-1">dsh-restart-anywhere</text>
   <text x="62" y="188" fill="#8b949e" font-size="19">One restart button for the DeepSeek Harness</text>
   <text x="62" y="218" fill="#8b949e" font-size="19">web GUI that works with <tspan fill="#3fb950" font-weight="700">your</tspan> setup.</text>
   <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" font-weight="600">
